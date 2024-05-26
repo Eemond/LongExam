@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static 'css/card.css' %}">
+<link rel="icon" type="image/x-icon" href="{% static 'image/card.ico' %}">
+<title>Cards</title>
+</head>
+
+<body>
+  <header class="header">
+    <a href="{% url 'card' %}" class="logo">Card of Truth</a>
+
+    <nav class="navbar">
+      <ul>
+        <a href="{% url 'home' %}" >Home</a>
+        <a href="{% url 'card' %}" class="active">Cards</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </ul>
+</nav>
+</header>
+<section class="content">
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Hobby</h1>
+            <p>an activity that you enjoy doing in your spare time. </p>
+          </div>
+          <div class="flip-card-back">
+            <img src="{% static 'image/gaming.jpg' %}" alt="playing">
+          </div>
+        </div>
+    </div>
+
+    <div class="flip-card" onclick="flipCard(this)"> 
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Things</h1>
+            <p>The things I want to Use</p>
+          </div>
+          <div class="flip-card-back">
+            <img src="{% static 'image/tool.jpg' %}" alt="">
+          </div>
+        </div>
+    </div>
+
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Color</h1>
+            <p>Color that symbolize me</p>
+          </div>
+          <div class="flip-card-back">
+            <img src="{% static 'image/color.jpg' %}" alt="">
+          </div>
+        </div>
+    </div>
+
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Season</h1>
+            <p>particular weather patterns and daylight hours, resulting from the earth's changing position with regard to the sun.</p>
+          </div>
+          <div class="flip-card-back">
+            <img src="{% static 'image/winter.jpg' %}" alt="">
+          </div>
+        </div>
+    </div>
+
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Character</h1>
+            <p><b>Arthur Leywin</b> is the main protagonist of The Beginning After The End.</p>
+          </div>
+          <div class="flip-card-back">
+            <img src="{% static 'image/character.jpg' %}" alt="">
+          </div>
+        </div>
+    </div>
+
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Dessert</h1>
+            <p><b>Mango float </b>known as mango royale, crema de mangga or mango graham cake is a popular Filipino dessert.</p>
+          </div>
+          <div class="flip-card-back">
+            <img src="{% static 'image/dessert.jpg' %}" alt="">
+          </div>
+        </div>
+    </div>
+
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Food</h1>
+            <p><b>Tortang Talong</b> known as eggplant omelette, is an omelette or fritter from Filipino cuisine made by pan-frying grilled whole eggplants dipped in an egg mixture.</p>
+          </div>
+          <div class="flip-card-back">
+            <img src="{% static 'image/food.jpg' %}" alt="">
+          </div>
+        </div>
+    </div>
+
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Place</h1>
+            <p><b>Japan</b> is a mountainous country, with two-thirds of its territory covered with forests.</p>
+          </div>
+          <div class="flip-card-back">
+            <img src="{% static 'image/place.jpg' %}" alt="">
+          </div>
+        </div>
+    </div>
+
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Time of Day</h1>
+            <p>3:15 - <i>No Reason :*</i></p>
+          </div>
+          <div class="flip-card-back">
+            <img src="{% static 'image/hour.png' %}" alt="">
+          </div>
+        </div>
+    </div>
+</section>
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2024 The Improvement of About Me Page</p>
+    <p>The Future Front-End Developer Reymond Ramos</p>
+    </nav>
+  </div>
+</footer>
+<script>
+  function flipCard(card) {
+    card.classList.toggle('flipped');
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="icon" type="image/x-icon" href="{% static 'image/home.ico' %}">
+
+</head>
+
+<body>
+  {% csrf_token %}
+<header class="header" >
+    <a href="#home-section" class="logo">About Me</a>
+    
+
+    <nav class="navbar">
+      <ul>
+        <a href="#home-section" class="active">Home</a>
+        <a href="#about-section">About</a>
+        <a href="{% url 'card' %}">Cards</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </ul>
+    </nav>
+</header>
+
+<section id="home-section">
+  <div class="home-content">
+    <h1> Introduction</h1>
+    <br>
+    <p>As I set out on my journey as a future developer, I am driven by a profound sense of curiosity and excitement. In a world where technology evolves at a dizzying pace, the role of a developer has never been more crucial. Like a future educator shaping minds, I see myself shaping the digital landscape, crafting solutions that inspire and empower.
+      <br>
+      In this introduction, I invite you to join me on this exhilarating quest. Together, we'll explore the dynamic realm of programming, overcoming challenges, and embracing innovation. With dedication and creativity, I am determined to leave a lasting mark on the world through the power of code.</p>
+  </div>
+</section>
+<div class="text-div">
+  <h1>Technological University of the Philippines - Cavite </h1>
+</div>
+<section class="mid-section">
+  <div class="mid"></div>
+  <!-- Img section-->
+</section>
+<div class="text-div">
+  <h1>Batchelor Technical Vocational Education Major in Computer Programming</h1>
+</div>
+<section id="about-section" class="active" >
+  <div class="about-content">
+    <br>
+    <h1> The Beginning as Future Educator and Industrial Developer
+      <p>Reymond Ramos is not your typical person; he is a visionary who is passionate about both industrial development and education. Reymond embodies the qualities of a forward-thinking industrial developer and future educator with an constantly desire to bring about constructive change.
+        <br>
+        <br>
+      Reymond was born with an impulsive passion of learning and a uncontrolled
+      curiosity, thus his career as an educator started long before he set foot in a classroom. He had a strong confidence in the transforming power of education from an early age and saw it as the cornerstone of society advancement. In light of this belief, Reymond set out to transform education by questioning accepted wisdom and investigating novel approaches that encourage original thought and critical thinking.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2024 The Improvement of About Me Page</p>
+    <p>The Future Front-End Developer Reymond Ramos</p>
+    <nav>
+      <ul>
+        <li><a href="#home-section">Home</a></li>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="{% url 'card' %}">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+  <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

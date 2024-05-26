@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: #EEA990;
+    align-items: center;
+    justify-content: center;
+    min-height: 110vh;
+}
+
+.logo {
+    position: relative;
+    font-size: 20px;
+    color: #f6f6f6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 98%;
+    padding: 30px 25px;
+    margin: 12px;
+    background-color: #66545e;
+    display: flex;
+    float: top;
+    border-radius: 25px 25px;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: #f6f6f6;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 12px 13px 0 0;
+    margin-right: 50px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #eea990;
+}
+
+.fixed-nav.scroll {
+    border-radius: 50px;
+}
+
+.contact h2{
+    font-size: 50px;
+    font-weight: 900;
+    color: #321919;
+    font-family: fantasy;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact form{
+    width: 100;
+    text-align: center;
+}
+
+form .input-box {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.input-box .input-field {
+    width: 48.5%;
+}
+
+.field .item {
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    border: 2px solid #66545e;
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #2b0606;
+    margin: 12px 0;
+}
+
+.field .item::placeholder {
+    color:#180b06;
+    font-weight: 600;
+}
+
+.field .error-text{
+    font-size: 14.5px;
+    color: red;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+form .textarea-field .item {
+    resize: none;
+}
+
+form .textarea- .error-text{
+    margin-top: -10px;
+}
+
+form button {
+    padding: 12px 32px;
+    background: #66545e;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow:  0 0 30px #66545e;
+    font-size: 18px;
+    color: #f6f6f6;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor:pointer ;
+    margin-top: 20px;
+    transition: .5s;
+}
+
+form button:hover {
+    box-shadow: none;
+}
+

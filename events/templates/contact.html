@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+  <link rel="icon" type="image/x-icon" href="{% static 'image/contact.ico' %}">
+
+</head>
+
+<body>
+  {% csrf_token %}
+<header class="header" >
+    <a href="{% url 'contact' %}" class="logo">Contact</a>
+    
+
+    <nav class="navbar">
+      <ul>
+        <a href="{% url 'home' %}" class="active">Home</a>
+        <a href="{% url 'card' %}">Cards</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </ul>
+    </nav>
+</header>
+<section class="contact">
+  <h2>Contact Me</h2>
+
+  <form action="#">
+    <div class="input-box">
+      <div class="input-field field">
+        <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+        <div class="error-text">Full name cannot be blank</div>
+      </div>
+      <div class="input-field field">
+        <input type="text" placeholder="Email Address" id="email" class="item" autocomplete="off">
+        <div class="error-text">Email Address cannot be blank</div>
+      </div>
+      <div class="input-field field">
+        <input type="text" placeholder="Phone Number" id="phone" class="item" autocomplete="off">
+        <div class="error-text">Phone Number cannot be blank</div>
+      </div>
+      <div class="input-field field">
+        <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+        <div class="error-text">Subject cannot be blank</div>
+      </div>
+    </div>
+    <div class="text-area-field field">
+      <textarea placeholder="Your Message" id="message" class="item" autocomplete="off"></textarea>
+      <div class="error-text">Message cannot be blank</div>
+      <button type="submit"> Send Message </button>
+    </div>
+  </form>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="{% static 'js/contact.js' %}"></script>
+</body>
+</html>
